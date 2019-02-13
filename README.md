@@ -79,6 +79,24 @@ Documentation
 
 You can find all the documentation in the [Wiki](https://github.com/shadowsocks/shadowsocks/wiki).
 
+### 解封历史
+
+记2019过年期间被封
+
+* 重启ss客户端
+
+1. 在服务器上打`netstat -tapn` 查看是否有很多的 **SYN_RECV**
+2. 再检查shadowsocks日志，查看端口有无请求
+
+* 若1中存在较多SYN_RECV且2中无请求，则说明端口boom了，换端口再试一试 *
+
+1. 第一次握手：建立连接时，客户端发送SYN包(SYN=J)到服务器，并进入SYN_SEND状态，等待服务器确认；
+2. 第二次握手：服务器收到SYN包，必须确认客户的SYN（ACK=J+1），同时自己也发送一个SYN包（SYN=K），即SYN+ACK包，此时服务器 进入SYN_RECV状态； 
+3. 第三次握手：客户端收到服务器的SYN＋ACK包，向服务器发送确认包ACK(ACK=K+1)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。
+
+完成三次握手，客户端与服务器开始传送数据.
+
+
 License
 -------
 

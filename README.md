@@ -30,8 +30,14 @@ CentOS:
 
 For CentOS 7, if you need AEAD ciphers, you need install libsodium
 ```
-dnf install libsodium python34-pip
-pip3 install  git+https://github.com/shadowsocks/shadowsocks.git@master
+yum -y update
+yum -y install yum-utils
+yum -y groupinstall development
+yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+yum -y install python36u
+yum -y install python36u-pip
+pip3.6 install  git+https://github.com/shadowsocks/shadowsocks.git@master
+yum -y install python36u-devel
 ```
 Linux distributions with [snap](http://snapcraft.io/):
 

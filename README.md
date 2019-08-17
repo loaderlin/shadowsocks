@@ -32,6 +32,7 @@ For CentOS 7, if you need AEAD ciphers, you need install libsodium
 ```
 yum -y update
 yum -y install yum-utils
+yum -y install net-tools
 yum -y groupinstall development
 yum -y install https://centos7.iuscommunity.org/ius-release.rpm
 yum -y install python36u
@@ -84,6 +85,12 @@ Documentation
 -------------
 
 You can find all the documentation in the [Wiki](https://github.com/shadowsocks/shadowsocks/wiki).
+
+### 关闭防火墙
+
+```
+systemctl stop firewalld.service
+```
 
 ### 解封历史
 

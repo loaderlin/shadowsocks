@@ -110,6 +110,31 @@ systemctl stop firewalld.service
 完成三次握手，客户端与服务器开始传送数据.
 
 
+### 使用谷歌访问助手
+
+1. 下载谷歌助手文件
+
+[谷歌助手文件](https://github.com/loaderlin/shadowsocks/blob/master/googlefwen.rar)
+
+2. 添加扩展程序
+
+新开一个TAB页，输入：chrome://extensions
+
+加载已解压的扩展程序， 选择解压后的文件夹位置
+
+3. 永久激活谷歌助手
+
+将https://www.hao123.com/ 设为首页，最后重启Chrome浏览器即可。
+
+### Astar VPN
+
+上谷歌商店下载 Astar VPN （谷歌插件）
+
+点击disconnect 启动AStar VPN
+
+![启动AStar VPN](https://github.com/loaderlin/shadowsocks/blob/rm/AstarVPN.png)
+
+
 License
 -------
 
